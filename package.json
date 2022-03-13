@@ -1,0 +1,14 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "OpenClassrooms project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass styles/scss/main.scss styles/css/style.css -w"
+  },
+  "author": "Thomas Amoroso",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
