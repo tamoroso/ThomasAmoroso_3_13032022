@@ -1,7 +1,6 @@
 .footer {
   position: relative;
   padding: 1rem;
-  color: white;
   background-color: rgb(58, 53, 53);
   &__logo {
     margin-bottom: 1rem;
@@ -15,7 +14,11 @@
   &__usefull_links li {
     margin-bottom: 0.5rem;
     cursor: pointer;
+    & a {
+      color: white;
+    }
     & i {
+      color: white;
       margin-right: 0.5rem;
     }
   }

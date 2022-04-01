@@ -35,7 +35,7 @@
   }
   &__selection {
     padding: 0.5rem 1rem;
-    width: 20%;
+    width: 15%;
     background-color: $tertiary-color;
 
     & i {
@@ -45,10 +45,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transform: rotate(360deg);
+      transition: transform 350ms ease-out;
     }
   }
 }
 
 .menu_card:hover > .menu_card__body {
-  min-width: 80%;
+  min-width: 85%;
+}
+
+.menu_card:hover > .menu_card__selection i {
+  transform: rotate(0deg);
 }
