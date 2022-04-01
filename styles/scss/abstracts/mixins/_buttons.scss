@@ -1,0 +1,17 @@
+@mixin gradient-btn($ptop, $pside) {
+  max-width: fit-content;
+  padding: $ptop $pside;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  background: $secondary-color;
+  background: $primary-gradient;
+  box-shadow: 2px 2px 7px gray;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px gray;
+    background: adjust-color($secondary-color, $lightness: 5%);
+    background: $secondary-gradient;
+  }
+}

@@ -1,0 +1,32 @@
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: auto;
+  &:hover > .fa-solid.fa-heart {
+    visibility: visible;
+  }
+  &:hover > .fa-regular.fa-heart {
+    visibility: hidden;
+  }
+}
+
+.fa-solid.fa-heart {
+  z-index: 10;
+  position: absolute;
+  visibility: hidden;
+}
+
+.fa-regular.fa-heart {
+  z-index: 1;
+  position: absolute;
+  visibility: visible;
+}
+
+.fa-solid.fa-heart:before {
+  color: transparent;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $primary-gradient;
+}

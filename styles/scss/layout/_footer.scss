@@ -1,0 +1,22 @@
+.footer {
+  position: relative;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(58, 53, 53);
+  &__logo {
+    margin-bottom: 1rem;
+    & svg {
+      width: 100px;
+    }
+    & svg path {
+      fill: white;
+    }
+  }
+  &__usefull_links li {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    & i {
+      margin-right: 0.5rem;
+    }
+  }
+}

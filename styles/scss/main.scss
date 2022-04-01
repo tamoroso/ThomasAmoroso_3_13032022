@@ -1,0 +1,18 @@
+@import "./core/reset";
+@import "./core/typography";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/sections";
+@import "./layout/loading";
+
+@import "./components/restaurant-card";
+@import "./components/menu-card";
+@import "./components/styled-list";
+@import "./components/like-icon";
+@import "./components/loader";
+
+@import "./sections/info-section";
+@import "./sections/restaurants-section";
+
+@import "./pages/menu";

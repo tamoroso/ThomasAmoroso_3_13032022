@@ -1,0 +1,40 @@
+@import "../abstracts/variables.scss";
+
+.info_section,
+.howto_section,
+.restaurant_section,
+.header--main__restaurant_location,
+.menu__section,
+.menu__main > img,
+.footer {
+  opacity: 0%;
+  animation: hidden 1s forwards;
+  animation-delay: $loading-timing;
+}
+
+main {
+  max-height: 70vh;
+  overflow: hidden;
+  animation: noscroll 0.2s forwards;
+  animation-delay: calc($loading-timing - 0.1s);
+}
+
+@keyframes hidden {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes noscroll {
+  from {
+    max-height: 70vh;
+    overflow: hidden;
+  }
+  to {
+    max-height: fit-content;
+    overflow: visible;
+  }
+}

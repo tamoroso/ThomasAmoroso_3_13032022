@@ -1,0 +1,71 @@
+@import "../abstracts/mixins/buttons";
+@import "../abstracts/variables.scss";
+
+.menu__main {
+  & img {
+    min-height: 30vh;
+    width: 100%;
+  }
+}
+
+.menu__section {
+  width: 100%;
+  position: relative;
+  border-radius: 40px 40px 0 0;
+  background-color: whitesmoke;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  & h2 {
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 400;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: $tertiary-color;
+    }
+  }
+  & button {
+    @include gradient-btn(0.7rem, 2rem);
+    margin: 1.5rem auto 0 auto;
+  }
+  .menu_card {
+    opacity: 0%;
+  }
+  @for $el from 1 to 20 {
+    & .menu_card:nth-child(#{$el}) {
+      animation: fadein forwards;
+      animation-duration: 400ms;
+      animation-delay: calc($loading-timing + ($el * 200ms));
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & h1 {
+    font-family: $big-title-font;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0%;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}

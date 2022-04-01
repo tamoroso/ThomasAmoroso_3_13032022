@@ -1,0 +1,42 @@
+@import "../abstracts/mixins/placement";
+
+.header {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  &--main {
+    display: flex;
+    flex-direction: column;
+    &__logo_container {
+      @include logo-placement;
+      box-shadow: 0px 1px 5px grey;
+    }
+    &__restaurant_location {
+      width: 100%;
+      @include center-content;
+      padding: 0.8rem 0;
+      background-color: rgba(211, 211, 211, 0.5);
+      font-weight: bold;
+      color: rgb(97, 97, 97);
+      & i {
+        margin: 0.5rem;
+      }
+    }
+  }
+  &--menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    &__logo_container {
+      @include logo-placement;
+    }
+    &__go_back {
+      @include center-content;
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

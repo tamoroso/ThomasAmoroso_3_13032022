@@ -4,11 +4,9 @@
   "description": "OpenClassrooms project",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass styles/scss/main.scss styles/css/style.css -w"
+    "sass": "sass -w styles/scss/main.scss:styles/css/style.css",
+    "prefix": "postcss ./styles/css/style.css --use autoprefixer -d ./styles/css/prefixed"
   },
   "author": "Thomas Amoroso",
-  "license": "ISC",
-  "dependencies": {
-    "node-sass": "^7.0.1"
-  }
+  "license": "ISC"
 }

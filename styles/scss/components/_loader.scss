@@ -1,0 +1,40 @@
+@import "../abstracts/variables.scss";
+
+.loader {
+  animation: $loading-timing loading forwards;
+  height: 100%;
+  width: 100%;
+  &:before {
+    animation: 1.5s linear infinite loader;
+    animation-play-state: inherit;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: $primary-color;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 40px;
+    will-change: transform;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}

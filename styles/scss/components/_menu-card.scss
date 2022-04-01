@@ -1,0 +1,54 @@
+.menu_card {
+  max-width: 100%;
+  box-shadow: 2px 2px 10px lightgray;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+
+  &__body {
+    padding: 0.5rem 1rem;
+    min-width: 100%;
+    transition: min-width 350ms ease-out;
+  }
+  & h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    & span:first-child {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+    & span:last-child {
+      font-weight: bold;
+    }
+  }
+  &__selection {
+    padding: 0.5rem 1rem;
+    width: 20%;
+    background-color: $tertiary-color;
+
+    & i {
+      color: white;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.menu_card:hover > .menu_card__body {
+  min-width: 80%;
+}
