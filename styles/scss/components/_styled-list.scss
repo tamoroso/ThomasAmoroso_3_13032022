@@ -1,11 +1,17 @@
 @import "../abstracts/variables.scss";
 
+@import "../abstracts/mixins/responsive";
+
 .styled_list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 20px;
+  margin: auto;
+  @include for-size(tablet) {
+    max-width: 60vw;
+  }
   & li {
     position: relative;
     padding: 1.5rem 2rem;

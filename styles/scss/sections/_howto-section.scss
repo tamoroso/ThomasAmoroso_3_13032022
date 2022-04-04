@@ -1,0 +1,10 @@
+@import "../abstracts/mixins/responsive";
+
+.howto_section {
+  & h2 {
+    margin: 0 auto 1.5rem auto;
+    @include for-size(tablet) {
+      max-width: 60vw;
+    }
+  }
+}

@@ -1,7 +1,12 @@
+@import "../abstracts//mixins/responsive";
+
 .footer {
   position: relative;
   padding: 1rem;
   background-color: rgb(58, 53, 53);
+  @include for-size(tablet) {
+    padding: 1rem 10rem;
+  }
   &__logo {
     margin-bottom: 1rem;
     & svg {

@@ -8,6 +8,7 @@
   background: $primary-gradient;
   box-shadow: 2px 2px 7px gray;
   transition: all 250ms ease-in-out;
+  cursor: pointer;
   &:hover {
     transform: scale(1.1);
     box-shadow: 10px 10px 10px gray;

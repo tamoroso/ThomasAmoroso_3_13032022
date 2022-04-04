@@ -5,6 +5,10 @@
   & img {
     min-height: 30vh;
     width: 100%;
+    object-fit: cover;
+    @include for-size(tablet) {
+      max-height: 50vh;
+    }
   }
 }
 
@@ -14,9 +18,16 @@
   border-radius: 40px 40px 0 0;
   background-color: whitesmoke;
   margin-top: -40px;
+}
+
+.menu__container {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  @include for-size(tablet) {
+    max-width: 60vw;
+    margin: auto;
+  }
   & h2 {
     font-size: 0.9rem;
     margin: 1rem 0 0 0;

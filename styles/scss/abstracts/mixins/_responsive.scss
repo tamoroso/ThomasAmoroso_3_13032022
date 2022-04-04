@@ -1,0 +1,12 @@
+@mixin for-size($size) {
+  @if $size == tablet {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
