@@ -4,9 +4,6 @@
   position: relative;
   padding: 1rem;
   background-color: rgb(58, 53, 53);
-  @include for-size(tablet) {
-    padding: 1rem 10rem;
-  }
   &__logo {
     margin-bottom: 1rem;
     & svg {
@@ -25,6 +22,13 @@
     & i {
       color: white;
       margin-right: 0.5rem;
+    }
+  }
+  &__logo,
+  &__usefull_links {
+    margin: 0 auto;
+    @include for-size(tablet) {
+      max-width: 60vw;
     }
   }
 }

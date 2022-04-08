@@ -78,11 +78,6 @@ ul {
   padding: 1rem;
   background-color: #3a3535;
 }
-@media screen and (min-width: 600px) {
-  .footer {
-    padding: 1rem 10rem;
-  }
-}
 .footer__logo {
   margin-bottom: 1rem;
 }
@@ -102,6 +97,14 @@ ul {
 .footer__usefull_links li i {
   color: white;
   margin-right: 0.5rem;
+}
+.footer__logo, .footer__usefull_links {
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  .footer__logo, .footer__usefull_links {
+    max-width: 60vw;
+  }
 }
 
 section {
@@ -155,6 +158,11 @@ main {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 2px 2px 10px lightgray;
+}
+@media screen and (min-width: 1200px) {
+  .restaurant_card {
+    max-height: 40vh;
+  }
 }
 .restaurant_card__tag {
   font-size: 0.8rem;
