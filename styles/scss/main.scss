@@ -1,3 +1,8 @@
+@import "./abstracts/variables.scss";
+@import "./abstracts/mixins/buttons";
+@import "./abstracts/mixins/placement";
+@import "./abstracts/mixins/responsive";
+
 @import "./core/reset";
 @import "./core/typography";
 
@@ -12,8 +17,5 @@
 @import "./components/like-icon";
 @import "./components/loader";
 
-@import "./sections/info-section";
-@import "./sections/restaurants-section";
-@import "./sections/howto-section";
-
 @import "./pages/menu";
+@import "./pages/home";
